@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    background: linear-gradient(180deg, #f9fafb 0%, #d2d6db 100%);
+    background-attachment: fixed;
+    min-height: 100%;
+    font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+  
+  body {
+    background: transparent;
+    min-height: 100vh;
+    font-family: inherit;
+  }
+}
