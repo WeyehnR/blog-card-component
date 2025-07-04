@@ -18,26 +18,26 @@ export function Card({ title, description, image, category, link }) {
       )}
       <div className="flex flex-col gap-3 self-stretch px-4 py-6">
         <div className="flex flex-col gap-2 self-stretch">
-          {category && (
+          {category ? (
             <div className="flex items-center bg-green-50 px-2 py-0.5 rounded-full border border-solid border-green-200 self-start">
               <span className="font-normal text-sm text-center text-green-700">
                 {category}
               </span>
             </div>
-          )}
-          {title && (
+          ): null }
+          {title  ?  (
             <span className="font-semibold text-lg text-neutral-900">
               {title}
             </span>
-          )}
+          ): null }
         </div>
         <div className="flex flex-col gap-6 self-stretch">
-          {description && (
+          {description  ?  (
             <span className="font-semibold text-base text-neutral-600">
               {description}
             </span>
-          )}
-          {link && (
+          ): null }
+          {link ? (
             <a
               href={link}
               target="_blank"
@@ -60,7 +60,7 @@ export function Card({ title, description, image, category, link }) {
                 />
               </svg>
             </a>
-          )}
+          ): null }
         </div>
       </div>
     </div>
